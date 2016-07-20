@@ -8,7 +8,7 @@ This setup uses `Gulp` for task management, with the aid of `PostCSS` + `Sass` f
 The Gulpfile has 9 tasks available 9:
 * `webserver`: starts a local webserver to serve the files
 * `css`: uses `PostCSS` + `cssnext` for prefixing and future CSS, and `Sass` as an aid. It also concatenates all CSS files, and minifies the result
-* `vendor-css`: this task is meant to grab all files inside the array of the task `src` and concatenates them into `vendor.css` and minifies it
+* `vendor-css`: this task is meant to grab all files inside the array of the task's `src` and concatenates them into `vendor.css` and minifies it
 * `js`: grabs all the files inside the `scripts` folder, concatenates them into `all.js`, and minifies it
 * `vendor-js`: works exactly like the `vendor-css` task but for vendor javascript
 * `clean`: this task deletes everything inside the `dist` filder
