@@ -10,6 +10,10 @@ var gulp = require('gulp'),
     del = require('del'),
     watch = require('gulp-watch');
 
+var paths = {
+  node: './node_modules/'
+};
+
 // gulp webserver - starts a local webserver to see changes
 gulp.task('webserver', function() {
   gulp.src('./dist')
@@ -43,6 +47,8 @@ gulp.task('vendor-css', function () {
   return (
     gulp.src([
       // source + 'plugin/styles.css'
+      // or
+      // paths.node + 'someplugin/dist/plugin.css'
     ])
     .pipe(concatCss('vendor.css'))
     .pipe(cssnano())
@@ -62,6 +68,8 @@ gulp.task('vendor-js', function() {
   var source = './src/vendor/';
   return gulp.src([
       // source + 'plugin/script.js'
+      // or
+      // paths.node + 'someplugin/dist/plugin.js'
     ])
     .pipe(concatJs('vendor.js'))
     .pipe(uglify())
